@@ -1,0 +1,207 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ 
+ <html xmlns="http://www.w3.org/1999/xhtml">
+ 
+ <head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<title>QLT - Structure of the Document</title>
+	<link rel="stylesheet" type="text/css" href="css_master_style.css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+</head>
+
+<body>
+<div id="content">
+<div id="menu">
+<ul>
+<li><a href="" class="main">-CSS-</a>
+		<ul id="dropcss">
+			<li><a href="10cssbasics.html">Basics</a></li>
+			<li><a href="11boxmodel.html">Box Model</a></li>
+			<li><a href="12positioning.html">Positioning</a></li>
+			<li><a href="13css3.html">CSS3</a></li>
+		</ul>
+	</li>
+	<li><a href="" class="main">-HTML-</a>
+		<ul id="drophtml">
+			<li><a href="3docstruc.html">Structure of the Document</a></li>
+			<li><a href="4tags.html">Tags</a></li>
+			<li><a href="5attributes.html">Attributes</a></li>
+			<li><a href="6links.html">Links</a></li>
+			<li><a href="7tablesandlists.html">Tables and Lists</a></li>	
+			<li><a href="8specialcharacters.html">Special Characters</a></li>
+			<li><a href="9media.html">Media</a></li>
+		</ul>
+	</li>
+	<li><a href="" class="main">-Introduction-</a>
+		<ul id="dropintro">
+			<li><a href="1basicsofwc.html">Basics of Web Content</a></li>
+			<li><a href="2sepofcon.html">Separation of Concerns</a></li>
+		</ul>
+	</li>
+</ul>
+</div>
+<br />
+	<h1>Structure of the Document</h1>
+<hr />
+	<h2>Importance</h2>
+		<p>Unfortunately web pages printed out do not look the way we intend them to. Printed out
+		pages most often do not look the way they look in a web browser. This means that we
+		don't have a full control over the final output. So the fundamental basis of the 
+		document structure has to be properly written in order for the final output, or in case
+		a web browser does not read additional embedded technologies, in order for the document
+		to be used by users.</p>
+
+		<p>Moreover, properly structured HTML will make your life much easier when it comes to 
+		editing and maintaining the documents. It also helps the rendering in browsers to be more
+		consistent as well as users have a possibility to use the accessibility features for display
+		to the fullest.</p>
+<hr />
+
+	<h2>Basic Structure</h2>
+		<p>An HTML document is composed of three different parts:</p>
+
+			<ol class="lists">
+				<li><h4>A line containing HTML version information</h4>
+					<ul>
+						<li><div class="examples">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;<br />
+						&quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;</div></li>
+
+						<li>The above is the Document Type Definition (DTD) declaration which identifies 
+						the version of the web document to the browser. The <i>PUBLIC</i> part identifies the version
+						of the mark-up language that the web document is written in (e.g. HTML 1.0, HTML5, etc). However
+						the <em>URL</em> part is for the location of the mark-up specifications and standards.</li>
+					</ul>	
+				</li>
+				
+				<li><h4>Declarative header section</h4>
+					<ul>
+						<li><div class="examples"><strong>&lt;head&gt;</strong><br />
+						&lt;title&gt;Title of the web document&lt;/title&gt;<br />
+						&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;<br />
+						<strong>&lt;head&gt;</strong></div></li>
+
+						<li>The 'header' section of the web document is read by the browser, however it is not 
+						being shown on the actual page. That section has no content; it only shows the information
+						about the web document that helps the browser to process it. The 'header' must also include
+						the <i>title</i> (&lt;title&gt;) which is shown on the Tab of the page in the web browser. 
+						If you do not give a <i>title</i> in the header, the browser will give it a default name, such 
+						as &quot;Untitled Document&quot; if you were using an application to create the web-page, or
+						if you were using something like Notepad++, the title will be the name of the web document 
+						that you gave when you had created it.</li>
+					
+				
+						<li>Optional declarations in the 'header' section may include additional Metadata (&lt;meta&gt;), 
+						Scripts (&lt;script&gt;) or Style-sheets either inside of the actual web document using &lt;style&gt; or
+						through a link to an external document - &lt;link&gt;.</li>
+					</ul>
+				</li>
+				
+				<li><h4>Body</h4>
+					<ul>
+						<li><div class="examples"><strong>&lt;body&gt;</strong><br />
+						&lt;div&gt;&lt;img src=&quot;title_of_the_picture.jpg&quot; alt=&quot;alternative title&quot;&gt;&lt;/div&gt;<br />
+						&lt;h1&gt;Head title in the document&lt;h1&gt;<br />
+						&lt;p&gt;A paragraph in the main body of the web document which is visible on the actual web page.&lt;br&gt;<br />
+						As long as the paragraphs are properly enclosed by &lt;p&gt;...&lt;/p&gt;, you can add as many paragraphs as you like<br />
+						&lt;/p&gt;<strong>&lt;/body&gt;</strong></div></li>
+						
+						<li>The above section that is enclosed in the <strong>&lt;body&gt;</strong> is the
+						content that is being processed into the web browser and then shown on the web page.
+						However the visual presentation of the final output might be influenced depending on 
+						the additional declarations and references mentioned in the 'header' section of the 
+						document.</li>
+					</ul>
+				</li>		
+			</ol>
+<hr />
+		<p>Furthermore, sections 2 and 3 must be enclosed into &lt;html&gt; tag in order for the 
+		web document to be complete. So the final output should, or rather must look somewhat like this:</p>
+
+	<ul class="lists">
+		<li><h4>In case of HTML 4.01</h4>
+			<ul>
+				<li class="examples">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.01//EN&quot;<br />
+				&quot;http://www.w3.org/TR/html4/strict.dtd&quot;&gt;<br />
+				<br />
+				<strong>&lt;html&gt;</strong><br />
+				<br />
+				<strong>&lt;head&gt;</strong><br />
+				&lt;title&gt;Title of the web document&lt;/title&gt;<br />
+				&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot;&gt;<br />
+				<strong>&lt;/head&gt;</strong><br />
+				<br />
+				<strong>&lt;body&gt;</strong><br />
+				.<br />
+				.<br />
+				.<br />
+				<strong>&lt;/body&gt;</strong><br />
+				<br />
+				<strong>&lt;/html&gt;</strong><br />
+				</li>
+			</ul>	
+		</li>
+		
+		<li><h4>In case of XHTML 1.0</h4>
+			<ul>	
+				<li>The main difference between HTML 4.01 and XHTML 1.0 is the DTD and the syntax in writing.
+				Instead of writing DTD HTML 4.01, now we have to change it to DTD XHTML 1.0 Strict along with the 
+				location of the mark-up specifications. In terms  of syntax, in XHTML the non-paired 
+				tags have to be self-closing. In addition, an extra attribute in the <i>html</i> tag has to be added
+				as it can be seen in the example below.</li>
+
+				<li class="examples">&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD XHTML 1.0 Strict//EN&quot;<br />
+				&quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd&quot;&gt;<br />
+				<br />
+				<strong>&lt;html</strong> xmlns=&quot;http://w3.org/1999/xhtml&quot;&gt;<br />
+				<br />
+				<strong>&lt;head&gt;</strong><br />
+				&lt;title&gt;Title of the web document&lt;/title&gt;<br />
+				&lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html;charset=utf-8&quot; /&gt;<br />
+				<strong>&lt;/head&gt;</strong><br />
+				<br />
+				<strong>&lt;body&gt;</strong><br />
+				.<br />
+				.<br />
+				.<br />
+				<strong>&lt;/body&gt;</strong><br />
+				<br />
+				<strong>&lt;/html&gt;</strong><br />
+				</li>
+			</ul>
+		</li>
+		
+		<li><h4>In case of HTML5</h4>
+			<ul>
+				<li>HTML5 differs from the older versions only by the simplified DOCTYPE and the <i>meta</i> tag in the 'header'.
+				However, in terms of Syntax either HTML 4.01 or/and XHTML 1.0 can be used.</li>
+				
+				<li class="examples">&lt;!DOCTYPE html&gt;<br />
+				<br />
+				<strong>&lt;html&gt;</strong><br />
+				<br />
+				<strong>&lt;head&gt;</strong><br />
+				&lt;title&gt;Title of the web document&lt;/title&gt;<br />
+				&lt;meta charset=&quot;utf-8&quot;&gt;<br />
+				<strong>&lt;/head&gt;</strong><br />
+				<br />
+				<strong>&lt;body&gt;</strong><br />
+				.<br />
+				.<br />
+				.<br />
+				<strong>&lt;/body&gt;</strong><br />
+				<br />
+				<strong>&lt;/html&gt;</strong><br />
+				</li>
+			</ul>
+		</li>			
+	</ul>
+<hr />
+<div class="botcontrols">
+<p><a href="2sepofcon.html">-Back-</a></p>
+<p><a href="0TutorialMainPage.html">-Home-</a></p>
+<p><a href="4tags.html">-Next-</a></p>
+</div>
+</div>
+</body>
+</html>

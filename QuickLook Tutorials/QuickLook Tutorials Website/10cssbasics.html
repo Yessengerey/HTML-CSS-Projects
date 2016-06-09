@@ -1,0 +1,157 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ 
+ <html xmlns="http://www.w3.org/1999/xhtml">
+ 
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<title>QLT - Basics of CSS</title>
+	<link rel="stylesheet" type="text/css" href="css_master_style.css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+</head>
+
+<body>
+<div id="content">
+<div id="menu">
+<ul>
+<li><a href="" class="main">-CSS-</a>
+		<ul id="dropcss">
+			<li><a href="10cssbasics.html">Basics</a></li>
+			<li><a href="11boxmodel.html">Box Model</a></li>
+			<li><a href="12positioning.html">Positioning</a></li>
+			<li><a href="13css3.html">CSS3</a></li>
+		</ul>
+	</li>
+	<li><a href="" class="main">-HTML-</a>
+		<ul id="drophtml">
+			<li><a href="3docstruc.html">Structure of the Document</a></li>
+			<li><a href="4tags.html">Tags</a></li>
+			<li><a href="5attributes.html">Attributes</a></li>
+			<li><a href="6links.html">Links</a></li>
+			<li><a href="7tablesandlists.html">Tables and Lists</a></li>	
+			<li><a href="8specialcharacters.html">Special Characters</a></li>
+			<li><a href="9media.html">Media</a></li>
+		</ul>
+	</li>
+	<li><a href="" class="main">-Introduction-</a>
+		<ul id="dropintro">
+			<li><a href="1basicsofwc.html">Basics of Web Content</a></li>
+			<li><a href="2sepofcon.html">Separation of Concerns</a></li>
+		</ul>
+	</li>
+</ul>
+</div>
+<br />
+	<h1>Basics of CSS</h1>
+<hr />
+<p>CSS stands for Cascading Style Sheets and as was mentioned in the introductory section of this tutorial, CSS is all about 
+style and visual presentation that is applied to the structured mark-up of the web 
+document. CSS allows a separation of style from structure and it has full control over almost 
+every element in the web page.</p>
+
+<p>But why do we need CSS? Well the answer is pretty obvious - plain black-on-white pages
+are dull and visually unattractive. So CSS allows you to express you creativity!</p>
+<p>However, there is still a trick to styling up your page. "Overstyling" may lead 
+to loss of information transmission to the user and "Understyling" may just not be enough 
+for the user to be interested in reading the information.</p>
+  
+<h2>Formatting Rules and Syntax</h2>
+<p>CSS has a set of certain rule that must be followed in order to open the full
+potential of the styling. The rules basically consist of <em>Selectors</em> which are 
+simply the Tags (p, div, ul, etc.) and <em>Declarators</em> that are added
+in the CSS style sheet (e.g. background, color, etc.).</p>  
+
+<p class="examples">p {background-color: blue;}</p>
+
+<p>The above is an example of a style rule which include a Selector (p) and a declaration that
+is enclosed in curly brackets with a format of <em>{style-property: value}</em>. If there
+are more than one declaration, then they can be separated by a semi-colon.</p>
+
+<p class="examples">ul {margin-right: 10%; font-size: 10px}</p>
+
+<p>In case you want to apply some style rules to several selectors at once, the selectors
+can be separated by a <em>comma</em></p>
+
+<p class="examples">h1,h2,h3 {background-color: red; font-style: italic;}</p>
+
+<hr />
+
+<h2>Setting Style Rules</h2>
+<p>There are two by which the style rules can be set - <strong>Internal</strong>, 
+<strong>External</strong> and/or <strong>Inline</strong>.</p>
+
+<p><strong>Internal</strong></p>
+ <p>Internal style rules must be set inside of the head section of the HTML.</p>
+<p class="examples">&lt;head&gt;<br />
+&lt;title&gt;A Title&lt;title&gt;<br />
+<strong>&lt;style type="text/css"><br />
+p {background-color: blue; font-style: italic;}<br />
+&lt;/style><br />
+</strong>
+ &lt;/head></p>
+ 
+<p><strong>External</strong></p>
+
+<p>External style rules are set from a separate file and are linked to the web 
+document. The style sheet is added through either a self closing link  
+or though an @import, both ways have to be added into the &lt;head&gt; section of the 
+web document. Moreover multiple style sheets can be linked to a single web document.</p>
+
+<p class="examples">&lt;head&gt;<br />
+&lt;title&gt;A Title&lt;/title&gt;<br />
+<strong>&lt;link rel="stylesheet" type="text/css" href="style_file.css" /><br />
+</strong>
+ &lt;/head></p>
+ 
+ <p class="examples">&lt;head&gt;<br />
+&lt;title&gt;A Title&lt;/title&gt;<br />
+<strong>&lt;style type="text/css"><br />
+@import url("style_file.css")<br />
+&lt;/style><br />
+</strong>
+ &lt;/head></p>
+ 
+ <p><strong>Inline</strong></p>
+ <p>Inline style rules are set inside of the opening of any tag. The CSS rules are put as values for the style attributes.</p>
+ 
+ <p class="examples">&lt;p <strong>style="color: whie; background-color: green;"</strong>>line&lt;p></p>
+ 
+ <hr />
+ <h2>Selectors</h2>
+ <p>There are three main selector types used for the style rules to be applied in the HTML: Tags - generally any tags can be used; Class - match all tags that contain that specific class;
+ Id - tag containing an id is treated as a unique tag as that id cannot be used for another tag. These tags can be combined together in various combinations in order to make the application
+ of style rule more specific.</p>
+ 
+ <h3>Class</h3>
+ 
+ <p>Class is a very general selector as multiple tags can be assigned the same class attribute and so any
+ set of style rules will be applied to all elements with that tag containing that class. Class selectors are set
+ inside of an opening tag in this format:</p>
+ 
+ <p class="examples">&lt;tag class="class name">...content...&lt;/tag></p>
+ 
+ <p>Then in the CSS style sheet rules are set in a specific form. The dot (.) specifies the class and anything before that
+ dot specifies the tag in which that class was written.</p>
+ <p class="examples">.class_name {style-property: value;}</p>
+ <p class="examples">tag.class_name {style-property: value;}</p>
+ 
+ <h3>Id</h3>
+ <p>These selectors are used in order to make a certain element unique in the page. An id can only be
+ used only once per page, however the same Id can be used on multiple pages if you'd like so</p>
+ 
+  <p class="examples">&lt;tag id="id_name">...content...&lt;/tag></p>
+  
+  <p>In order to apply some rules in the Style sheet to that specific id, a hash tag (#) is used in the CSS selector pattern</p>
+  
+  <p class="examples">#id_name {style-property: value;}</p>
+  
+ <hr />
+ <div class="botcontrols">
+<p><a href="9media.html">-Back-</a></p>
+<p><a href="0TutorialMainPage.html">-Home-</a></p>
+<p><a href="11boxmodel.html">-Next-</a></p>
+</div>
+</div>
+</body>
+</html>
+

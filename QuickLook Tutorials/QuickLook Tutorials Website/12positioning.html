@@ -1,0 +1,116 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ 
+ <html xmlns="http://www.w3.org/1999/xhtml">
+ 
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<title>QLT - CSS Positioning</title>
+	<link rel="stylesheet" type="text/css" href="css_master_style.css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+</head>
+
+<body>
+<div id="content">
+<div id="menu">
+<ul>
+	<li><a href="" class="main">-CSS-</a>
+		<ul id="dropcss">
+			<li><a href="10cssbasics.html">Basics</a></li>
+			<li><a href="11boxmodel.html">Box Model</a></li>
+			<li><a href="12positioning.html">Positioning</a></li>
+			<li><a href="13css3.html">CSS3</a></li>
+		</ul>
+	</li>
+	<li><a href="" class="main">-HTML-</a>
+		<ul id="drophtml">
+			<li><a href="3docstruc.html">Structure of the Document</a></li>
+			<li><a href="4tags.html">Tags</a></li>
+			<li><a href="5attributes.html">Attributes</a></li>
+			<li><a href="6links.html">Links</a></li>
+			<li><a href="7tablesandlists.html">Tables and Lists</a></li>	
+			<li><a href="8specialcharacters.html">Special Characters</a></li>
+			<li><a href="9media.html">Media</a></li>
+		</ul>
+	</li>
+	<li><a href="" class="main">-Introduction-</a>
+		<ul id="dropintro">
+			<li><a href="1basicsofwc.html">Basics of Web Content</a></li>
+			<li><a href="2sepofcon.html">Separation of Concerns</a></li>
+		</ul>
+	</li>
+</ul>
+</div>
+<br />
+	<h1>CSS Positioning</h1>
+<hr />
+<p>Good CSS cannot be achieved without proper HTML structure. So I'd even say that 
+you have to keep in mind that you basically start writing CSS when you are building
+up the structure of HTML. The first 'step' to "sensei-ing" CSS is to understand the
+logic behind the CSS Box model and the Natural Page Flow (source order display of (X)HTML elements). 
+Once you start to view the content of a web page as simply boxes of content, positioning 
+and layout with CSS becomes very easy.</p>
+<hr />
+
+<h2>Floating</h2>
+<p>In order to explain Floating of objects through CSS lets consider a real life
+example. Let say we have three boxes of some content.</p>
+
+<p class="examples">&lt;tag id=<strong>"box1"</strong>>...content...&lt;/tag><br />
+&lt;tag id=<strong>"box2"</strong>>...content...&lt;/tag><br />
+&lt;tag id=<strong>"box3"</strong>>...content...&lt;/tag><br /></p>
+
+<p>All of them have certain and the same <em>width</em> and <em>height</em>. 
+Let's change the <em>width</em> of the first box, say make it smaller, and <em>float</em> it to the left.
+</p>
+
+<p><span class="examples">#box1 {width: 200px; <strong>float: left;</strong>}</span> - What happens next?</p>
+
+	<ol class="lists">
+		<li>The box that had been assigned to float to the left will firstly be pushed to the
+		top as far as possible, over the content of other boxes and to the opposite direction of
+		the specified flow.</li>
+		<li>Then the box is pushed in the direction of the float as far as possible</li>
+		<li>As the floated box is now over the content of the other boxes, that content is
+		allowed to wrap around the floated box. However the shape of boxes that remain 
+		beneath the box1 do not change the shape.</li>
+	</ol>
+	<p>Boxes that remain beneath another box after that box was floated can be pushed out from beneath the covering box,
+	which is achieved by <strong>#box3 {clear: right/left/both;}</strong>. The values
+	specify which side of the box should be cleared of floating elements.</p>	
+	
+	<p>Sometimes in order to tackle the problem with the content wrapping around the floated
+	box, you could use <strong>columns</strong>. Which are simply created by padding the 
+	content of the boxes that are beneath the floated box as well as altering the margins
+	in order to move the borders of the boxes as well.</p>
+	
+<hr />	
+<h2>Position Properties</h2>
+		<table>
+			<tr>
+				<th>Value</th><th>Explanation</th>
+			</tr>
+			<tr>
+				<td>static</td><td>This value does not have a position and is set as a default</td>
+			</tr>	
+			<tr>
+				<td>relative</td><td>Allows the element to be positioned 'relative' to the other elements, meaning change in the positioning of other elements may have an effect on the position of that element</td>
+			</tr>
+			<tr>
+				<td>absolute</td><td>With this value the element is being removed from the page flow and then be put anywhere you like</td>
+			</tr>
+			<tr>
+				<td>fixed</td><td>The element is being removed from the page flow and then fixed at the browser viewport, which allows the other content to be scrolled behind that element</td>
+			</tr>
+		</table>
+<hr />
+	<div class="botcontrols">
+<p><a href="11boxmodel.html">-Back-</a></p>
+<p><a href="0TutorialMainPage.html">-Home-</a></p>
+<p><a href="13css3.html">-Next-</a></p>
+</div>
+</div>	
+
+		
+</body>
+</html>

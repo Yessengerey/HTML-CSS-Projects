@@ -1,0 +1,158 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ 
+ <html xmlns="http://www.w3.org/1999/xhtml">
+ 
+ <head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<title>QLT - Tables and Lists</title>
+	<link rel="stylesheet" type="text/css" href="css_master_style.css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+</head>
+
+<body>
+<div id="content">
+<div id="menu">
+<ul>
+<li><a href="" class="main">-CSS-</a>
+		<ul id="dropcss">
+			<li><a href="10cssbasics.html">Basics</a></li>
+			<li><a href="11boxmodel.html">Box Model</a></li>
+			<li><a href="12positioning.html">Positioning</a></li>
+			<li><a href="13css3.html">CSS3</a></li>
+		</ul>
+	</li>
+	<li><a href="" class="main">-HTML-</a>
+		<ul id="drophtml">
+			<li><a href="3docstruc.html">Structure of the Document</a></li>
+			<li><a href="4tags.html">Tags</a></li>
+			<li><a href="5attributes.html">Attributes</a></li>
+			<li><a href="6links.html">Links</a></li>
+			<li><a href="7tablesandlists.html">Tables and Lists</a></li>	
+			<li><a href="8specialcharacters.html">Special Characters</a></li>
+			<li><a href="9media.html">Media</a></li>
+		</ul>
+	</li>
+	<li><a href="" class="main">-Introduction-</a>
+		<ul id="dropintro">
+			<li><a href="1basicsofwc.html">Basics of Web Content</a></li>
+			<li><a href="2sepofcon.html">Separation of Concerns</a></li>
+		</ul>
+	</li>
+</ul>
+</div>
+<br />
+	<h1>Tables and Lists</h1>
+<hr />
+	<h2>Tables</h2>
+		<p>Tables were introduced into HTML in order to help the representation of certain data
+		like statistics of some type, in a tabular and neat way. Tables can also be used for
+		the layout of the page's content, however that should be done with care. Tags and Attributes
+		can also be used when creating tables, though they would only be able to provide
+		just basic structure and representation. Other more visually attractive enhancements
+		can and are suggested to be made through CSS.</p>
+		
+	<h3>Basic structure</h3>	
+		<ul class="lists">
+			<li>Table should open up with a simple tag &lt;table&gt;. Since the table tag is of
+			a paired type, it should also be closed properly.</li>
+			<li>The content that is intended to be a header in the table should be enclosed in &lt;th&gt;
+			tag; and the content that is not a heading should be enclosed in &lt;td&gt;</li>
+			<li>Cells and headers themselves have to be within a row for the table consequently 
+			they have to be enclosed by &lt;tr&gt; tag.</li>
+			<li>Title of the table can either be written via &lt;p&gt; or &lt;caption&gt; tags. Although 
+			only through the second tag	will the browser actually associate the table with that name. 
+			With &lt;p&gt; tag, the browser reads the title of the table only as a 'sentence' above the
+			table</li>
+		</ul>
+		<p class="examples">&lt;caption&gt;Title of the table&lt;/caption&gt;<br />
+		<strong>&lt;table&gt;</strong><br />
+		<strong>&lt;tr&gt;</strong><br />
+		<strong>&lt;th&gt;</strong>Header 1<strong>&lt;/th&gt;&lt;th&gt;</strong>Header 2<strong>&lt;/th&gt;</strong><br />
+		<strong>&lt;/tr&gt;<br />
+		&lt;tr&gt;<br />
+		&lt;td&gt;</strong>Content under header 1<strong>&lt;/td&gt;&lt;td&gt;</strong>Content under header 2<strong>&lt;/td&gt;</strong><br />
+		<strong>&lt;/tr&gt;</strong><br />
+		<strong>&lt;/table&gt;</strong><br />
+		</p>
+	<h3>Table Attributes</h3>
+		<p>There are also other attributes that enhance the visual representation of the table to a certain 
+		extend. Other attributes like colour, are now only to be applied through CSS. However, the examples 
+		given below may only be used in HTML5 as XHTML 1.0 nor HTML 4.01 does not allow even those attributes
+		to be applied to the table the Mark-up language.</p>
+			<table class="center">
+				<tr>
+					<th>Attributes</th><th>Explanation</th>
+				</tr>
+				<tr>
+					<td>border</td><td>Affects that visibility and thickness of the table's border</td>
+				</tr>
+				<tr>
+					<td>width</td><td>Affects the width of the table, units of which can either be Numbers (pixels) or percentage</td>
+				</tr>
+				<tr>
+					<td>cellspacing</td><td>Affects the distance between the cells within the table; units are pixels</td>
+				</tr>
+				<tr>
+					<td>cellpadding</td><td>Affects the distance between the content of the cells and the cells' frames; units are pixels</td>
+				</tr>
+			</table>
+<hr />
+	<h2>Lists</h2>
+		<p>Lists can be used to improve the organization of the content as well as simplify the understanding
+		of the presented information for the users. They are also the fundamental basis for dynamic menus and 
+		tab effects (with the help of CSS and other embedded technologies). Nevertheless lists' main focus 
+		drops on the organization rather than the visual representation. Overall, there are three types of lists: 
+		<strong>Unordered</strong> which is basically bullet points; <strong>Ordered</strong> that is a numbered list; and 
+		<strong>Definition</strong> - list consisting of terms and their definitions.</p>
+		
+	<h3>Unordered</h3>
+		<p class="examples">&lt;ul&gt;<br />
+		&lt;li&gt;...a line of the list...&lt;/li&gt;<br />
+		&lt;li&gt;...a line of the list...&lt;/li&gt;<br />
+		&lt;/ul&gt;
+		</p>
+		<ul class="lists">
+			<li>All bullet lists open up with the &lt;ul&gt; tag and close with the appropriate one - &lt;/ul&gt;.</li>
+			<li>Every line of the lists must be enclosed with the paired &lt;li&gt; tag.</li>	
+		</ul>
+		
+	<h3>Ordered</h3>
+		<p class="examples">&lt;ol&gt;<br />
+		&lt;li&gt;...a line of the list...&lt;/li&gt;<br />
+		&lt;li&gt;...a line of the list...&lt;/li&gt;<br />
+		&lt;/ol&gt;
+		</p>
+		<ol class="lists">
+			<li>All ordered (numbered) lists should be enclosed by &lt;ol&gt;...the list...&lt;/ol&gt;</li>
+			<li>Every line of an ordered list has to be wrapped up by &lt;li&gt;...a line of the list...&lt;/li&gt;</li>
+		</ol>
+		
+	<h3>Definition list</h3>
+		<p class="examples">&lt;dl&gt;<br />
+		&lt;dt&gt;Term A&lt;/dt&gt;<br />
+		&lt;dd&gt;Definition of the Term A&lt;/dd&gt;<br />
+		&lt;dt&gt;Term B&lt;/dt&gt;<br />
+		&lt;dd&gt;Definition of the Term B&lt;/dd&gt;<br />
+		&lt;/dl&gt;<br />
+		</p>
+		<p>The Definition List must be enclosed by &lt;dl&gt;...&lt;/dl&gt; tags. The term that 
+		is to be defined should be wrapped up by &lt;dt&gt;...&lt;/dt&gt; tags and finally the 
+		definition of the specified term has to be wrapped by &lt;dd&gt; tag. The end result is shown
+		below:</p>
+		<dl class="lists">
+			<dt>Term A</dt>
+				<dd>Definition of the Term A</dd>
+			<dt>Term B</dt>
+				<dd>Definition of the Term B</dd>
+		</dl>
+		
+<hr />
+<div class="botcontrols">
+<p><a href="6links.html">-Back-</a></p>
+<p><a href="0TutorialMainPage.html">-Home-</a></p>
+<p><a href="8specialcharacters.html">-Next-</a></p>
+</div>
+</div>
+</body>
+</html>

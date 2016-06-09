@@ -1,0 +1,163 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ 
+ <html xmlns="http://www.w3.org/1999/xhtml">
+ 
+ <head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<title>QLT - Tags</title>
+	<link rel="stylesheet" type="text/css" href="css_master_style.css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+</head>
+
+<body>
+<div id="content">
+<div id="menu">
+<ul>
+<li><a href="" class="main">-CSS-</a>
+		<ul id="dropcss">
+			<li><a href="10cssbasics.html">Basics</a></li>
+			<li><a href="11boxmodel.html">Box Model</a></li>
+			<li><a href="12positioning.html">Positioning</a></li>
+			<li><a href="13css3.html">CSS3</a></li>
+		</ul>
+	</li>
+	<li><a href="" class="main">-HTML-</a>
+		<ul id="drophtml">
+			<li><a href="3docstruc.html">Structure of the Document</a></li>
+			<li><a href="4tags.html">Tags</a></li>
+			<li><a href="5attributes.html">Attributes</a></li>
+			<li><a href="6links.html">Links</a></li>
+			<li><a href="7tablesandlists.html">Tables and Lists</a></li>	
+			<li><a href="8specialcharacters.html">Special Characters</a></li>
+			<li><a href="9media.html">Media</a></li>
+		</ul>
+	</li>
+	<li><a href="" class="main">-Introduction-</a>
+		<ul id="dropintro">
+			<li><a href="1basicsofwc.html">Basics of Web Content</a></li>
+			<li><a href="2sepofcon.html">Separation of Concerns</a></li>
+		</ul>
+	</li>
+</ul>
+</div>
+<br />
+<h1>Tags</h1>
+<hr />
+<p>As was mentioned before in the introductory part of this tutorial, the tags help 
+to build up the core structure of the displayed content, as tags focus on the semantics 
+of the web page. Tags also have their own default conventions for rendering a functional
+display. Tags in general are broken up into three different kinds: Paired, Unpaired, 
+Inline and Block level tags.</p>
+<dl class="lists">
+	<dt><strong>Paired Tags</strong></dt>
+		<dd>Tags that are paired up usually wrap a certain content that is being 
+		processed, onto the screen when the web page is open, for example:
+		<div class="examples">
+		<p><strong>&lt;h1&gt;</strong>A Heading<strong>&lt;/h1&gt;</strong></p>
+		<p><strong>&lt;p&gt;</strong>A paragraph<strong>&lt;/p&gt;</strong></p>
+		</div>
+		</dd>
+	<dt><strong>Unpaired Tags</strong></dt>
+		<dd>Unpaired tags are obviously those that should be self-closed and that do not wrap 
+		any content. However these tags may still have some specific attributes like an 'id' or
+		a 'class'. Examples of unpaired tags are as follows:
+		<div class="examples">
+		<p><strong>&lt;br /&gt;</strong></p>
+		<p><strong>&lt;hr /&gt;</strong></p>
+		<p>&lt;hr <strong>id</strong>=&quot;rule&quot; /&gt;</p>
+		</div>
+		
+		</dd>	
+	<dt><strong>Block Level Tags</strong></dt>
+		<dd>
+		Block level tags are there for providing the general structure of the content for the web page.
+		The structure which is built from these tags includes <strong>Headings</strong>, 
+		<strong>Paragraphs</strong> and <strong>Horizontal Rules</strong>, which are 
+		for the text structure; it also includes the organization of Lists and Tables,
+		which are going to be discussed in detail later on in this tutorial.
+		
+		<p><strong>Headings</strong> are by far the most important components when it
+		comes to building the structure of the web page. They help the users to scan
+		through the web page and understand its general content. <strong>Headings</strong>
+		can be of 6 different levels (h1 - h6); level one being the biggest and the main heading, 
+		which means there can only be one 'h1' heading per page. In addition, all <strong>headings</strong>
+		are treated as separate blocks, so they cannot and must not be nested within each other.</p>
+		<div class="examples">
+		<p>&lt;h1&gt;Main Heading&lt;h1&gt;</p>
+		<p>&lt;h2&gt;Sub Heading&lt;h2&gt;</p>
+		</div>
+		<p><strong>Paragraphs</strong>, as was mentioned before, act as a container that encloses
+		the main information that is displayed on the web page via &lt;p&gt;...&lt;/p&gt;.</p>
+		
+		<p><strong>Breaks</strong> and <strong>Rules</strong> do not enclose anything inside of them.
+		However they still do affect the visual representation of the content. <strong>Breaks</strong>
+		force lines within a, for example paragraph to break. This is not an ideal practise so
+		its better to avoid <strong>Breaks</strong> as much as possible. <strong>Rules</strong> on the
+		other hand create lines with which the content can be separated into sections</p>
+		<div class="examples">
+		<p>&lt;br /&gt; - Line break</p>
+		<p>&lt;hr /&gt; - Horizontal rule</p>
+		</div>
+		</dd>
+	<dt><strong>Inline Level Tags</strong></dt>
+		<dd>Inline tags have to be nested inside of block level tags. Inline tags are usually used 
+		to apply some behaviour to only a specific word/sentence in a paragraph or to a particular
+		part of the web document.
+		<p>Usually only the <strong>Logical</strong> types of the inline tags are used. These add an extra
+		rendering intent to the enclosed content. However, you should always keep in mind that 
+		different web browsers may render the inline tags differently.</p>
+		<p>Common logical inline tags include:</p>
+		
+		<table class="center">
+			<tr>
+				<th>Tags</th><th>Explanation</th>
+			</tr>
+			<tr>
+				<td>&lt;em&gt;</td><td>Enclosed content appears in <em>italics</em></td>
+			</tr>	
+			<tr>
+				<td>&lt;strong&gt;</td><td>Enclosed content appears in <strong>bold</strong></td>
+			</tr>
+			<tr>
+				<td>&lt;cite&gt;</td><td>Encloses a citation or a reference</td>
+			</tr>
+			<tr>
+				<td>&lt;abbr&gt;</td><td>Encloses an abbreviation; tag also requires a <em>title</em> attribute</td>
+			</tr>	
+			<tr>
+				<td>&lt;a href=&quot;<a href="">url</a>&quot;&gt;</td><td>Creates a link from the enclosed content</td>
+			</tr>
+		</table>	
+		
+		
+		<p>Another type of inline tags is <strong>Physical</strong>. However they've only been used
+		in the past. They also produce only a visual effect that can be seen when the web
+		document is rendered by the browser. Right now, it is insisted to use the alternative
+		to the various inline physical tags, which is CSS.</p>
+		
+		<p>Additional information about Physical inline tags can be found here:<br />
+		<a href="http://scholar.lib.vt.edu/reports/soasis-slides/slide11.html">Physical Style Elements</a> - VirginiaTech, <em>Digital Library and Archives</em></p>
+		</dd>
+</dl>
+<hr />
+<h3>HTML5 Elements</h3> 
+<p>When HTML had reached its 5th version, <strong>Flow</strong> and <strong>Phrasing</strong> elements
+were introduced in order to reflect a logical structure for the more modern we documents. It had also
+reduced the requirement for the extra <strong>id</strong> and <strong>class</strong> attributes, which 
+made 'styling' of the document easier.</p>
+
+<p>Notable additions for Block Level tags were &lt;section&gt;, &lt;nav&gt;, &lt;article&gt;, and for the 
+Inline Level tags &lt;canvas&gt;, &lt;progress&gt;, &lt;output&gt;.</p>
+
+<p>The full list of Tags of various levels that are used in HTML 4.01, XHTML 1.0 and HTML 5 can be seen here <br /> 
+<a href="https://developer.mozilla.org/en/docs/Web/Guide/HTML/HTML5/HTML5_element_list"> HTML5 element list</a> - MDN, <em>HTML developer guide</em>.</p>
+<hr />
+<div class="botcontrols">
+<p><a href="3docstruc.html">-Back-</a></p>
+<p><a href="0TutorialMainPage.html">-Home-</a></p>
+<p><a href="5attributes.html">-Next-</a></p>
+</div>
+</div>
+</body>
+</html>

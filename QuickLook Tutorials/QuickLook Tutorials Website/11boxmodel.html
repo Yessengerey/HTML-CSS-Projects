@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ 
+ <html xmlns="http://www.w3.org/1999/xhtml">
+ 
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<title>QLT - CSS Box Model</title>
+	<link rel="stylesheet" type="text/css" href="css_master_style.css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+</head>
+
+<body>
+<div id="content">
+<div id="menu">
+<ul>
+<li><a href="" class="main">-CSS-</a>
+		<ul id="dropcss">
+			<li><a href="10cssbasics.html">Basics</a></li>
+			<li><a href="11boxmodel.html">Box Model</a></li>
+			<li><a href="12positioning.html">Positioning</a></li>
+			<li><a href="13css3.html">CSS3</a></li>
+		</ul>
+	</li>
+	<li><a href="" class="main">-HTML-</a>
+		<ul id="drophtml">
+			<li><a href="3docstruc.html">Structure of the Document</a></li>
+			<li><a href="4tags.html">Tags</a></li>
+			<li><a href="5attributes.html">Attributes</a></li>
+			<li><a href="6links.html">Links</a></li>
+			<li><a href="7tablesandlists.html">Tables and Lists</a></li>	
+			<li><a href="8specialcharacters.html">Special Characters</a></li>
+			<li><a href="9media.html">Media</a></li>
+		</ul>
+	</li>
+	<li><a href="" class="main">-Introduction-</a>
+		<ul id="dropintro">
+			<li><a href="1basicsofwc.html">Basics of Web Content</a></li>
+			<li><a href="2sepofcon.html">Separation of Concerns</a></li>
+		</ul>
+	</li>
+</ul>
+</div>
+<br />
+	<h1>CSS Box Model</h1>
+<hr />
+<p>Box model is one of the core elements of CSS layout, in fact every element in the page
+is actually represented as a box, which means that every single tag has a box associated
+with it</p>
+<p>Boxes themselves have certain attributes in terms of "layers" around the text content
+which they enclose: Border, Padding and Margin.</p>
+<h2>Border</h2>
+<p>Border is the outline of the box which itself has three different style attributes:</p>
+	<ul class="lists">
+		<li>Width - a unit of measurement, e.g. "border-width: 15px;"</li>
+		<li>Style - special style of the actual border can be set through "border-style: solid/dashed/etc."</li>
+		<li>Color - simply give a color to the border of the box, "border-color: red;".</li>
+	</ul>
+<h2>Padding</h2>
+	<p>Padding creates space between the actual content and the border of the box. Usually 
+	images are used to fill in the space of the padding. Padding is declared in the way
+	shown below:</p>
+	
+	<ul class="lists">
+		<li><strong>padding: 20px</strong> - all sides acquire padding of 20 px</li>
+		<li><strong>padding-top, padding-left</strong> - padding is applied to only one of the sides of the box</li>
+	</ul>	
+	
+<h2>Margin</h2>
+	<p>Margin sets the spacing between the outside wall of the border of the box and the boxes of other page elements, which is very useful for managing the content.</p>
+
+	<ul class="lists">
+		<li><strong>margin: 20px</strong> - all sides acquire margin of 20 px</li>
+		<li><strong>margin-top, margin-left</strong> - margin is applied to only one of the sides of the box</li>
+	</ul>	
+	
+	<h3>Shorthand Declarations</h3>
+		<p>Shorthand declarations are simply declarations that are merged together. They are more precise and much easier to implement. It is suggested
+		to use these declarations as much as possible in order to reduce the amount of the styling code. Some
+		examples of Shorthand Declarations are given below:</p>
+		<table class="center">
+			<tr>
+				<th>Shorthand Declarations</th><th>Explanation</th>
+			</tr>
+			<tr>
+				<td>border-width: 10px;</td><td>Width of all four sides is set to 10px</td>
+			</tr>	
+			<tr>
+				<td>margin: 10px 20px 5px 25px;</td><td>Setting margin for top/right/bottom/left</td>
+			</tr>
+			<tr>
+				<td>border: 15px dashed red;</td><td>Specified border is set to all four sides of the box</td>
+			</tr>
+		</table>
+	<h2>Width and Height</h2>
+	<div class="examples">
+		<ul class="lists">
+		<li>#box {width 300px;}</li>
+		<li>#box {min-width: 450px; max-width: 700px;}</li>
+		</ul>
+		</div>
+		<p>These properties are used in order to impose a defined value 
+		on the width and height of the content inside of the box.
+		</p>
+<hr />		
+	<h2>Background</h2>
+	<p>The background property simply sets any background filling for the visible space
+	inside of the box and behind the content</p>
+	<ul class="lists">
+		<li><strong>background-color: xxx;</strong> - sets a valid solid/transparent color as the background via either a name or a numeric value</li>
+		<li><strong>background-image: url(location of the img file url/local file access)</strong> - sets a chosen image as the background</li>
+		<li><strong>background-position: top/right/left/bottom or top right, etc.</strong> - positions the original copy of the image inside of the box</li>
+		<li><strong>background-repeat: repeat/no-repeat</strong> - controls the repetition of the image (image is repeated by default)</li>
+	</ul>
+	<p>Images that are added through CSS should only be of decorative intention. Photographs/pictures/images that
+	that are meant to deliver some sort of content should be added to the page via
+	HTML. In addition, only CSS3 multiple images are allowed to be present in a single box.
+	In previous versions of CSS that is not possible.</p>
+	
+<hr />
+
+	<h2>Content Overflow</h2>
+	<p>Shrinking a box might affect the content in a way that it would simply overflow
+	the frame of the box due to lack of space. And there are several ways of dealing with 
+	such kind of problem:</p>
+	
+	<ul class="lists">
+		<li><strong>overflow: visible;</strong> - lets the text to 'spill' out of the box (which is also a default option)</li>
+		<li><strong>overflow: hidden;</strong> - hides the overflow meaning the only content that will be visible is that one that fits</li>
+		<li><strong>overflow: scroll/auto;</strong> - adds a scrollbar on the side of the inner border of the box via which you can see the content that was supposed to 'spill' out</li>
+	</ul>
+	<hr />	
+	
+	<h2>Display and Visibility</h2>
+	<p><strong>Display</strong> property has full control of how an element should be displayed in
+	the flow of the page structure or should it even be displayed at all</p>
+	
+	<ul class="lists">
+		<li><strong>selector {display: block;}</strong> - displays all elements within the specified <em>selector</em> as a block, i.e. one under another.</li>
+		<li><strong>selector {display: inline;}</strong> - displays all elements within the specified <em>selector</em> in a line, i.e. one after another.</li>
+		<li><strong>selector {display: none;}</strong> - removes elements within the specified <em>selector</em> from the page flow, i.e. elements are not only no longer visible, but the spaces reserved for them by the browser are also removed.</li>
+	</ul>	
+	
+	<p><strong>Visibility</strong> enables/disables visibility of elements yet not removing them from the page flow, meaning that the 
+	space reserved for the elements by the browser can still be seen</p>
+	
+	<ul class="lists">
+		<li><strong>selector {visibility: hidden;}</strong> - hides all elements within the specified <em>selector</em> yet not removing them from the page flow</li>
+		<li><strong>selector {visibility: visible;}</strong> - makes all elements within the specified <em>selector</em> (browser default)</li>
+		<li><strong>selector {visibility: collapse;}</strong> - removes a row or column from a table leaving s the space for other content to be added</li>
+	</ul>	
+		
+	
+<hr />
+<div class="botcontrols">
+<p><a href="10cssbasics.html">-Back-</a></p>
+<p><a href="0TutorialMainPage.html">-Home-</a></p>
+<p><a href="12positioning.html">-Next-</a></p>
+</div>
+</div>	
+		</body>
+</html>

@@ -1,0 +1,167 @@
+#content {
+min-width: 699px; 
+max-width: 960px;
+margin: 0% auto;
+background: white;
+}
+
+p, h1, h2, h3, dl{
+padding: 0px 20px 0px 20px;
+}
+
+dl dt{
+font-family: "Lucida Console", Monaco, monospace;
+color: #FF6633;
+}
+
+h1 {
+text-shadow: 17px 9px 6px #99CC99;
+color: #336633;
+font-family:"Courier New", Courier, monospace;
+ }
+
+ol li{
+padding: 0px 15px 0px 10px;
+}	
+
+
+h2,h3, h4 {
+font-family: "Lucida Console", Monaco, monospace;
+color: #FF6633;
+}
+
+body{
+width: 100%;
+background: #99CC99;
+}
+
+hr{
+display: block;
+border: 0;
+border-top: 5px solid #99CC99;
+}
+
+#change{
+font-size: 20px;
+}
+
+#menu ul {
+  font-family: Arial, Verdana;
+  font-size: 14px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+#menu ul li {
+  display: block;
+  position: relative;
+  float: right;
+}
+#menu li ul { 
+display: none; 
+}
+#menu ul li a {
+  display: block;
+  text-decoration: none;
+  color: #ffffff;
+  border-top: 1px solid #ffffff;
+  
+  background: #99CC99;
+  margin-left: 0px;
+  white-space: nowrap;
+}
+#menu ul li a:hover { 
+background: #95A9B1; 
+}
+#menu li:hover ul {
+  display: block;
+  position: absolute;
+}
+#menu li:hover li {
+  float: none;
+  font-size: 11px;
+}
+#menu li:hover a { 
+background: #617F8A; 
+}
+#menu li:hover li a:hover { 
+background: #95A9B1; 
+	}
+#menu li ul {
+font-family: "Lucida Console", Monaco, monospace;
+}
+#menu a.main {
+font-size: 20px;
+font-weight: bold;
+margin-top:0%;
+border: 0;	
+padding: 5px 118px 5px 15px;
+font-family:"Courier New", Courier, monospace;
+}
+
+#dropintro li a{
+padding: 5px 132px 5px 15px;
+}
+#drophtml li a{
+padding: 5px 15px 5px 15px;
+}
+#dropcss li a{
+padding: 5px 101px 5px 15px;
+}
+#content{
+font-family:"Lucida Sans Unicode", "Lucida Grande", sans-serif;
+}
+
+.examples {
+font-family:"Courier New", Courier, monospace;
+background-color: #FFFFCC;
+margin-right: 75px;
+margin-left: 20px;
+}
+
+table, td, th{
+border: 2px solid #99CC99;
+}
+
+table.center{
+margin-left:auto;
+margin-right: auto;
+}
+
+th{
+background-color: #95A9B1;
+color: #FFFFFF;
+padding: 3px 0px 5px 0px;
+}
+
+ol.lists li{
+margin-top: 20px;
+}
+
+dl.lists dd, dt{
+margin-top: 20px;
+}
+
+ul.lists li{
+margin-top: 20px;
+}
+
+div.botcontrols{
+padding: 0px 0px 2px 0px;
+text-align: center;
+}
+
+div.botcontrols :hover a{
+background: #617F8A; 
+}
+
+div.botcontrols p a{
+margin-left: 25px;
+background-color: #99CC99;
+padding: 5px;
+font-family:"Courier New", Courier, monospace;
+font-size: 20px;
+text-decoration: none;
+font-weight: bold;
+color: #ffffff;
+}

@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ 
+ <html xmlns="http://www.w3.org/1999/xhtml">
+ 
+ <head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<title>QLT - Attributes</title>
+	<link rel="stylesheet" type="text/css" href="css_master_style.css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+</head>
+
+<body>
+<div id="content">
+<div id="menu">
+<ul>
+<li><a href="" class="main">-CSS-</a>
+		<ul id="dropcss">
+			<li><a href="10cssbasics.html">Basics</a></li>
+			<li><a href="11boxmodel.html">Box Model</a></li>
+			<li><a href="12positioning.html">Positioning</a></li>
+			<li><a href="13css3.html">CSS3</a></li>
+		</ul>
+	</li>
+	<li><a href="" class="main">-HTML-</a>
+		<ul id="drophtml">
+			<li><a href="3docstruc.html">Structure of the Document</a></li>
+			<li><a href="4tags.html">Tags</a></li>
+			<li><a href="5attributes.html">Attributes</a></li>
+			<li><a href="6links.html">Links</a></li>
+			<li><a href="7tablesandlists.html">Tables and Lists</a></li>	
+			<li><a href="8specialcharacters.html">Special Characters</a></li>
+			<li><a href="9media.html">Media</a></li>
+		</ul>
+	</li>
+	<li><a href="" class="main">-Introduction-</a>
+		<ul id="dropintro">
+			<li><a href="1basicsofwc.html">Basics of Web Content</a></li>
+			<li><a href="2sepofcon.html">Separation of Concerns</a></li>
+		</ul>
+	</li>
+</ul>
+</div>
+<br />
+	<h1>Attributes</h1>
+<hr />
+	<p>Attributes are an extra piece of information added inside of a tag. And as was 
+	mentioned earlier in this tutorial's Introduction, Attributes provide 
+	specific properties/behaviour for that particular content enclosed with that tag via
+	additional embedded technologies. All attributes are usually declared in the opening 
+	tag, however self-closing tags may also have some attributes. Furthermore, if 
+	following the rules of XHTML - all attributes must have a certain value. 
+	Some examples of attributes usage are are given below:</p>
+	
+	<p class="examples">&lt;tag <strong>attribute=&quot;value&quot;</strong>some content&lt;/tag&gt;</p>
+
+	<p class="examples">&lt;img <strong>src=&quot;name_of_image.img&quot; alt=&quot;alternative_name&quot; /&gt;</strong></p>
+
+	<p class="examples"><strong>checked=&quot;checked&quot;</strong></p>
+
+	<p>Some common attributes and their explanation are shown in the table below. Those 
+	attributes can be applied to any tags that are inside of the &lt;body&gt; section.</p>
+ 
+		<table class="center">
+			<tr>
+				<th>Attributes</th><th>Explanation</th>
+			</tr>
+			<tr>
+				<td>&lt;id&gt;</td><td>Used to give a specific element a unique identification for CSS.</td>
+			</tr>	
+			<tr>
+				<td>&lt;class&gt;</td><td>Used to associate several elements of the web document to a CSS class.</td>
+			</tr>
+			<tr>
+				<td>&lt;title&gt;</td><td>This attribute is used by the screen readers.<br />
+										It simply provides general information about the element that it's assigned to.</td>
+			</tr>
+			<tr>
+				<td>&lt;style&gt;</td><td>Through this attribute, the element it's assigned to is given certain inline CSS specifications.</td>
+			</tr>	
+		</table>
+<br />		
+<hr />	
+	<h2>Tag-level Association</h2>
+	<p>This is simply a way of organizing elements within the web page for the CSS and other embedded technologies.
+	This kind of 'grouping' helps to assign certain behaviour to several elements at once.</p>
+	
+	<p>In terms of the <strong>Class</strong> attribute - there is not limits in its usage. Several 
+	tags can be associated with the same <strong>Class</strong> attribute, as well as a single
+	tag is allowed to have been assigned several <strong>Class</strong> attributes. Also any individual
+	class attribute can be reused anywhere within a page and in tags of different types.</p>
+	
+	<p>When it comes to the usage of <strong>id</strong> attributes, unfortunately there are some
+	restrictions. The <strong>id</strong> attribute is a unique attribute and so any
+	individual <strong>id</strong> can only be used once per page. In addition, an element is 
+	allowed to have only one <strong>id</strong> attribute, which means you are not
+	allowed to group several elements under the same <strong>id</strong> for the CSS.</p>
+	
+	<p>For example:</p>
+	<div class="examples" id="exampleintag">
+	<p>&lt;p <strong>class=&quot;pizza&quot;&gt;</strong>Pizzas are very delicious&lt;/p&gt;</p>
+	<p>&lt;p <strong>class=&quot;pizza&quot; id=&quot;margherita&quot;&gt;</strong>Pizza Margherita is the best one&lt;/p&gt;</p>
+	</div>
+<hr />
+<div class="botcontrols">
+<p><a href="4tags.html">-Back-</a></p>
+<p><a href="0TutorialMainPage.html">-Home-</a></p>
+<p><a href="6links.html">-Next-</a></p>
+</div>	
+</div>
+</body>
+</html>

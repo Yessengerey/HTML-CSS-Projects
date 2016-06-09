@@ -1,0 +1,206 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ 
+ <html xmlns="http://www.w3.org/1999/xhtml">
+ 
+<head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<title>QLT - Media</title>
+	<link rel="stylesheet" type="text/css" href="css_master_style.css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+</head>
+
+<body>
+<div id="content">
+<div id="menu">
+<ul>
+<li><a href="" class="main">-CSS-</a>
+		<ul id="dropcss">
+			<li><a href="10cssbasics.html">Basics</a></li>
+			<li><a href="11boxmodel.html">Box Model</a></li>
+			<li><a href="12positioning.html">Positioning</a></li>
+			<li><a href="13css3.html">CSS3</a></li>
+		</ul>
+	</li>
+	<li><a href="" class="main">-HTML-</a>
+		<ul id="drophtml">
+			<li><a href="3docstruc.html">Structure of the Document</a></li>
+			<li><a href="4tags.html">Tags</a></li>
+			<li><a href="5attributes.html">Attributes</a></li>
+			<li><a href="6links.html">Links</a></li>
+			<li><a href="7tablesandlists.html">Tables and Lists</a></li>	
+			<li><a href="8specialcharacters.html">Special Characters</a></li>
+			<li><a href="9media.html">Media</a></li>
+		</ul>
+	</li>
+	<li><a href="" class="main">-Introduction-</a>
+		<ul id="dropintro">
+			<li><a href="1basicsofwc.html">Basics of Web Content</a></li>
+			<li><a href="2sepofcon.html">Separation of Concerns</a></li>
+		</ul>
+	</li>
+</ul>
+</div>
+<br />
+	<h1>Multimedia</h1>
+<hr />
+	<h2>Basics</h2>
+	<p>Non-textual content of any page requires the browser to be able to handle
+	and support them i.e. make them visible and some times support interactivity if
+	needed. In addition there is a certain way for different media objects to be embedded
+	in the web pages, all of which will be discussed in this section of the tutorial.</p>
+	
+	<p>Nowadays some basic media objects will have a native support from any browser, 
+	meaning no extra software is required for the objects to be visible. Such objects 
+	would include some simple image formats, perhaps some audio and/or video objects.</p>
+	
+	<p>However some more complicated types of objects will need some help from certain
+	plug-in applications. These kind of objects' formats would include Flash Player,
+	QuickTime, Media Player, etc.</p>
+<hr />
+	<h2>Adding Images</h2>
+	<p>There is a simple way of adding images to a web page, example of which you 
+	can see below:</p>
+	<p class="examples">&lt;img <strong>src=&quot;name_of_the_image.png&quot;</strong> <strong>alt=&quot;Alt. Name&quot;</strong> /&gt;</p>
+	
+	<p>Image should be added through a self-closing tag 'img'. The 'src' attribute is
+	for specifying the location of the image file, should it be from a local file
+	or online in web. The 'alt' attribute's role is to provide an alternative name
+	that will appear instead of the image in case the image does not show up or load
+	in the web page.</p>
+	
+	<p>There are three main image file types that should be used in order to embed
+	the images into the web page: <strong>GIF</strong>, <strong>JPEG</strong> and 
+	<strong>PNG</strong>.</p>
+	
+	<p>GIF is good for solid graphics as it has only 256 colour
+	palettes. It can also have a transparent background and can be used for simple
+	short animations. Moreover it does not lose anything if the image is being 
+	compressed.</p>
+	
+	<p>PNG is loss-less when compressed as well, it is considered to be a replacement, 
+	or some might even say, an improvement for GIF as it not only can have transparency
+	but also can handle higher resolution images.</p>
+	
+	<p>JPEG is best for photos due to 16 million colour palettes. However at the
+	same time it loses quality if compressed to a smaller file size. When compressed, 
+	JPEG introduces blur and so the sharpness of colours and edges get worse.</p>
+	
+	<p>In general, I would my personal favourite is PNG. As it easily handles high resolution
+	images with full palette and does not lose sharpness if the file is compressed. Although
+	when it comes to dealing with high resolution photos that include very complex colours
+	and their mixes, the best format would be JPEG (if used carefully).</p>
+	
+	
+	<h3>Attributes for an Image</h3>
+		<table class="center">
+			<tr>
+				<th>Codes</th><th>Characters</th>
+			</tr>
+			<tr>
+				<td>src</td><td>The attribute is the location of the image file, either through the local file system or online, in which case you'd have to used the full absolute URL of the source.</td>
+			</tr>
+			<tr>
+				<td>alt</td><td>An alternative name/description of the image used by screen readers or if the image doest not load in the page.</td>
+			</tr>
+			<tr>
+				<td>width/height</td><td>The dimensions of the space that browser should reserve for that image, which means change in this attribute does not the alter the size of the actual image; unit - pixels.</td>
+			</tr>
+			<tr>
+				<td>title</td><td>Descriptive title that can only be seen when you hover the mouse over that image.</td>
+			</tr>			
+		</table>
+		
+<hr />
+	<h2>Adding other media objects</h2> 
+	<p>When we are talking about other media objects its usually either Videos and Audio objects.
+	Most of the formats for those kind of objects are usually supported by the majority of the
+	browsers. Unlike image objects, there are several ways by which video and audio objects can
+	added to the page - &lt;applet&gt; (Java applets; part of HTML spec), 
+	&lt;embed&gt; (Netscape; supported by many browsers but never adopted in standard HTML 
+	versions), &lt;object&gt; (introduced by W3C into HTML 4.01), &lt;iframe&gt; and &lt;video&gt;/&lt;audio&gt;(part of HTML5). 
+	Nevertheless the most popular of all of these methods are &lt;embed&gt; and &lt;object&gt;</p>
+	
+	<p>Examples given below are some templates of how a video should be added into a web page via various methods.</p>
+	
+	<h3>&lt;embed&gt;</h3>
+	<p>'Embed' is the most widely used method to add media objects like videos to a web page. This is due
+	to the method being supported by most of the browsers of the present and the past. However, YouTube 
+	is starting to phase &lt;embed&gt; out and use &lt;iframe&gt; instead.
+	</p>
+	<p>Below is a template of how an embeding a video object into a web page should look like:</p>
+	
+	<p class="examples"><strong>&lt;embed src=</strong>"location of the video"<br /> 
+	<strong>type=</strong>"application/x-shockwave-flash"<br />
+	<strong>width=</strong>"xxx" <strong>height=</strong>"xxx"<br />
+	<strong>allowscriptaccess=</strong>"always"<br />
+	<strong>allowfullscreen=</strong>"true"><br />
+	<strong>&lt;/embed&gt;</strong>
+	</p>
+	
+		<ul class="lists">
+			<li><strong>src</strong> attribute should specify the location of the video like the full absolute URL</li>
+			<li><strong>type</strong> is responsible for specifying the application that the video is run with</li>
+			<li><strong>width</strong> and <strong>height</strong> are the dimensions for the browser window that is set for the video object; the dimensions do not alter the size of the actual video</li>
+			<li><strong>allowscriptaccess</strong> allows the video to be affected by scripting</li>
+			<li><strong>allowfullscreen</strong> allows the video to be open on full screen</li>
+		</ul>
+		
+	<h3>&lt;object&gt;</h3>
+	
+	<p>&lt;object&gt; is the current and the "correct" way of adding an object like a video into a web page. This 
+	method was introduced by W3C into HTML 4.01. It is supported by all web browsers that we use today. The
+	only difference is the addition of the parameters &lt;param&gt;. A template for this method can be seen below</p>
+	
+	<p class="examples"><strong>&lt;object</strong> <strong>width=</strong>"xxx" <strong>height=</strong>"xxx"<br />
+	<strong>type=</strong>"application/x-shockwave-flash"<br />
+	<strong>data=</strong>"location of the video"><br />
+	
+	&lt;<strong>param</strong> name="movie" value="location of the video" /><br />
+	&lt;<strong>param</strong> name="allowFullScreen" value="true"/><br />
+	&lt;<strong>param</strong> name="allowscriptaccess" value="always"/><br />
+	<strong>&lt;/object&gt;</strong>
+	</p>
+		
+		<ul class="lists">
+			<li><strong>type</strong> is responsible for specifying the application that the video is run with. This is required by Internet Explorer</li>
+			<li>Instead of <strong>src</strong> we have to put <strong>data</strong> to specify the location of the video from which the video should be imported into the web page. <strong>Data</strong> is required by Firefox</li>
+			<li>Parameters <strong>param</strong> are the information about the video for the screen reader</li>
+		</ul>
+	
+	
+	<h3>&lt;iframe&gt;</h3>
+	
+	<p>Possibly the least complicated and my personal favourite way of adding a video into a web page, however this method may not be supported by all web browsers.</p>
+	
+	<p class="examples"><strong>&lt;iframe</strong><br /> 
+	<strong>width</strong>="xxx" <strong>height</strong>="xxx"<br /> 
+	<strong>src</strong>="location of the video"<br /> 
+	<strong>frameborder="0"</strong><br /> 
+	<strong>allowfullscreen</strong>><br />
+	<strong>&lt;/iframe></strong><br />
+	</p>
+	
+	<h3>&lt;video&gt;</h3>
+	
+	<p>An HTML5 version of the method to add a video into a web page. Here controls are added if the web browser is capable of handling it.</p>
+	
+	<p class="examples"><strong>&lt;video</strong><br /> 
+	<strong>width</strong>="xxx" <strong>height</strong>="xxx"<br /> 
+	<strong>src</strong>="location of the video"<br /> 
+	<strong>type=</strong>"application/x-shockwave-flash"<br />
+	<strong>controls</strong>="controls"><br />
+	<strong>&lt;/video&gt;></strong><br />
+	</p>
+	
+<hr />
+<div class="botcontrols">
+<p><a href="8specialcharacters.html">-Back-</a></p>
+<p><a href="0TutorialMainPage.html">-Home-</a></p>
+<p><a href="10cssbasics.html">-Next-</a></p>
+</div>
+</div>
+</body>
+</html>
+
+		

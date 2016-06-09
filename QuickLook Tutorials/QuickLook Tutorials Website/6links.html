@@ -1,0 +1,105 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+ 
+ <html xmlns="http://www.w3.org/1999/xhtml">
+ 
+ <head>
+	<meta http-equiv="content-type" content="text/html;charset=utf-8" />
+	<title>QLT - Links</title>
+	<link rel="stylesheet" type="text/css" href="css_master_style.css" />
+	<meta http-equiv="X-UA-Compatible" content="IE=8" />
+</head>
+
+<body>
+<div id="content">
+<div id="menu">
+<ul>
+<li><a href="" class="main">-CSS-</a>
+		<ul id="dropcss">
+			<li><a href="10cssbasics.html">Basics</a></li>
+			<li><a href="11boxmodel.html">Box Model</a></li>
+			<li><a href="12positioning.html">Positioning</a></li>
+			<li><a href="13css3.html">CSS3</a></li>
+		</ul>
+	</li>
+	<li><a href="" class="main">-HTML-</a>
+		<ul id="drophtml">
+			<li><a href="3docstruc.html">Structure of the Document</a></li>
+			<li><a href="4tags.html">Tags</a></li>
+			<li><a href="5attributes.html">Attributes</a></li>
+			<li><a href="6links.html">Links</a></li>
+			<li><a href="7tablesandlists.html">Tables and Lists</a></li>	
+			<li><a href="8specialcharacters.html">Special Characters</a></li>
+			<li><a href="9media.html">Media</a></li>
+		</ul>
+	</li>
+	<li><a href="" class="main">-Introduction-</a>
+		<ul id="dropintro">
+			<li><a href="1basicsofwc.html">Basics of Web Content</a></li>
+			<li><a href="2sepofcon.html">Separation of Concerns</a></li>
+		</ul>
+	</li>
+</ul>
+</div>
+<br />
+	<h1>Links</h1>
+<hr />
+	<p>Link or rather HyperLink is a very useful tool. It does not only allow you
+	to organize the created web pages in a convenient enough way but also allows you to
+	provide roots for more information on the web. HyperLinks are also called <em>Anchors</em>
+	or just Links.</p>
+
+	<p>As defined in the W3C specification - <em>&quot;A link is a connection from one web resource to another&quot;</em></p>
+
+	<p>Links are created using an inline tag &lt;a&gt;. The <strong>href</strong> attribute specifies the location to link to.
+	An example of a link you can see below:</p>
+	<p><span class="examples"><strong>&lt;a href=</strong>&quot;destination&quot;<strong>></strong>a link<strong>&lt;/a&gt;</strong></span> &raquo;&raquo;&raquo; <a href="6links.html">a link</a></p>
+
+<hr />
+	<h2>Common Link Types</h2>
+	<p>There are several common link types that are widely used, list of which is shown below:</p>
+		<ul class="lists">
+			<li>Link to another website<br />
+				<ul>
+					<li>In this case the <strong>href</strong> attribute has to be the 
+					full absolute URL of the website you intend this link to take you to.</li>
+					<li class="examples"><strong>&lt;a href=&quot;http://www.w3.org/&quot;&gt;</strong>W3C main page<strong>&lt;/a&gt;</strong></li>
+				</ul>
+			</li>
+			<li>Link to the other pages on your site (through local file system)
+				<ul>
+					<li>The <strong>href</strong> should have the name and the type of the file it is intended to take you to. That 
+					web document should be stored in the same folder as the page from where the link is originated.</li>	
+					<li class="examples"><strong>&lt;a href=&quot;0TutorialMainPage.html&quot;&gt;</strong>QLT - main page<strong>&lt;/a&gt;</strong></li>
+				</ul>
+			</li>
+			<li>Link to the parts of a page
+				<ul>
+					<li>The <strong>href</strong> should be pointed at a specific fragment of the destination document that is identified with 
+					the <strong>id</strong></li>
+					<li class="examples"><strong>&lt;a href=&quot;0TutorialMainPage.html#navigation&quot;&gt;</strong>QLT - main page (navigation menu)<strong>&lt;a&gt;</strong></li>
+				</ul>
+			</li>
+			<li>Links within the page
+				<ul>
+					<li>The <strong>href</strong> will have to be referring to the tag that will contain the specified <strong>id</strong></li>
+					<li class="examples"><strong>&lt;a href=&quot;0TutorialMainPage.html#an_id&quot;&gt;</strong>QLT - main page<strong>&lt;/a&gt;</strong></li>
+				</ul>			
+			</li>
+			<li>Link to a web page which is located in a different folder relative to the folder where the source page is
+				<ul>
+					<li>The <strong>href</strong> will have to have sections, names of the folder, divided by a backslash.</li>
+					<li class="examples"><strong>&lt;a href=&quot;folder_name/0TutorialMainPage.html&quot;&gt;</strong>QLT - main page<strong>&lt;/a&gt;</strong></li>
+				</ul>	
+			</li>
+		</ul>
+		
+<hr />
+<div class="botcontrols">
+<p><a href="5attributes.html">-Back-</a></p>
+<p><a href="0TutorialMainPage.html">-Home-</a></p>
+<p><a href="7tablesandlists.html">-Next-</a></p>
+</div>			
+</div>		
+</body>
+</html>
